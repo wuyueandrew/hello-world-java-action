@@ -12,7 +12,8 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: "java ${{ github.action_path }}/Hello"
+#    - run: "java ${{ github.action_path }}/Hello"
+    - run: "java -cp ${{ github.action_path }}/ Hello"
       shell: bash
 #  args:
 #    - ${{ inputs.who-to-greet }}
